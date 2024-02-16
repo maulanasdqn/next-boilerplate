@@ -7,7 +7,7 @@
 
     (writeScriptBin "helpme" ''
       __usage="
-      👋 Welcome to NeoSiakad development environment. 🚀
+      👋 Welcome to Next Boilerplate development environment. 🚀
       If you see this message, it means your are inside the Nix shell ❄️.
 
       [Info]===============================================================>
@@ -20,7 +20,6 @@
         - start:            start project in production ( need to run build first  ) 🛹
         - build:            build project for production
         - dev:              start development server
-        - start-postgres:   start postgres-db
         - story-dev:        start storybook in development
         - story-build:      build storybook
         - db-gen:           generate drizzle migration
@@ -30,7 +29,7 @@
         - helpme:           show this messages
 
       Repository:
-        - https://github.com/maulanasdqn/neo-siakad
+        - https://github.com/maulanasdqn/next-boilerplate
       [Info]===============================================================>
       "
       echo "$__usage"
