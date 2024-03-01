@@ -12,5 +12,9 @@ export const Tag: FC<TTag> = ({
     "bg-success-100 text-success-500": variant === "success",
     "bg-warning-100 text-warning-500": variant === "warning",
   });
-  return <div className={className}>{children}</div>;
+  return (
+    <div data-testid="tag" className={className}>
+      {children}
+    </div>
+  );
 };

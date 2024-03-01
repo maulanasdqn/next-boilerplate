@@ -1,21 +1,21 @@
 import { FC, useId } from "react";
-import { TInput } from "../type";
+import { TTextArea } from "../type";
 import { className } from "../style";
 
-export const InputText: FC<TInput> = ({
+export const InputTextArea: FC<TTextArea> = ({
   size = "sm",
   status = "primary",
-  type = "text",
   placeholder = "Masukkan Data",
   ...props
 }) => {
   const id = useId();
   return (
-    <input
+    <textarea
       {...props}
       id={id}
+      data-testid="text-area"
+      role="textbox"
       className={className({ size, status })}
-      type={type}
       placeholder={placeholder}
     />
   );
