@@ -5,7 +5,7 @@ export type TButton = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > & {
-  variant: Omit<TVariant, "default" | "info">;
+  variant: Omit<TVariant, "default">;
   size: TSize;
   variantType?: TVariantType;
   href?: string;

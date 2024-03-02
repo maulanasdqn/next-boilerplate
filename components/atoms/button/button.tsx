@@ -12,19 +12,11 @@ export const Button: FC<TButton> = ({
   ...props
 }): ReactElement => {
   const className = clsx(
-    "rounded-lg text-white hover:opacity-80",
+    "rounded-lg hover:opacity-80",
     "disabled:cursor-not-allowed disabled:hover:opacity-80 disabled:bg-grey-200",
     {
       "border bg-transparent": variantType === "outline",
-      "border-none": variantType === "solid",
-    },
-    {
-      "bg-primary": variant === "primary" && variantType === "solid",
-      "bg-primary-2": variant === "secondary" && variantType === "solid",
-      "bg-success": variant === "success" && variantType === "solid",
-      "bg-error": variant === "error" && variantType === "solid",
-      "bg-warning": variant === "warning" && variantType === "solid",
-      "bg-info": variant === "info" && variantType === "solid",
+      "border-none text-white": variantType === "solid",
     },
     {
       "border-bg-primary text-primary":
@@ -39,6 +31,14 @@ export const Button: FC<TButton> = ({
         variant === "warning" && variantType === "outline",
       "border-bg-info text-info":
         variant === "info" && variantType === "outline",
+    },
+    {
+      "bg-primary": variant === "primary" && variantType === "solid",
+      "bg-primary-2": variant === "secondary" && variantType === "solid",
+      "bg-success": variant === "success" && variantType === "solid",
+      "bg-error": variant === "error" && variantType === "solid",
+      "bg-warning": variant === "warning" && variantType === "solid",
+      "bg-info": variant === "info" && variantType === "solid",
     },
     {
       "text-sm px-2 py-1": size === "sm",

@@ -3,7 +3,7 @@
 {
   packages = with pkgs; [
     bun
-    nodejs_21
+    nodejs
 
     (writeScriptBin "helpme" ''
       __usage="
@@ -12,7 +12,7 @@
 
       [Info]===============================================================>
 
-      NodeJS Version: v${nodejs_21.version}
+      NodeJS Version: v${nodejs.version}
       Bun Version: v${bun.version}
       Typescript Version: v${typescript.version} 
 
