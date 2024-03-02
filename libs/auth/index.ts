@@ -2,7 +2,7 @@ import type { AuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 
-export const authOptions = {
+export const authOptions: AuthOptions = {
   pages: {
     signIn: "/auth/login",
   },
@@ -21,7 +21,6 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_SECRET!,
     }),
   ],
-
   callbacks: {
     async jwt({ token, profile, account }) {
       if (account?.provider === "google" && profile) {
@@ -47,7 +46,6 @@ export const authOptions = {
       }
       return token;
     },
-
     async session({ session, token }) {
       session.user = {
         ...token,
@@ -56,4 +54,4 @@ export const authOptions = {
       return session;
     },
   },
-} as AuthOptions;
+} satisfies AuthOptions;
