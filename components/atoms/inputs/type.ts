@@ -5,21 +5,22 @@ import {
   TextareaHTMLAttributes,
 } from "react";
 
+export type TInputExtend = {
+  size?: TSize;
+  status: Omit<TVariant, "primary" | "secondary">;
+};
+
 export type TInput = Omit<
   DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
   "size"
-> & {
-  size: TSize;
-  status: Omit<TVariant, "primary" | "secondary">;
-};
+> &
+  TInputExtend;
 
 export type TInputCheckbox = Omit<
   DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
   "size" | "type"
-> & {
-  size: TSize;
-  status: Omit<TVariant, "primary" | "secondary">;
-};
+> &
+  TInputExtend;
 
 export type TTextArea = Omit<
   DetailedHTMLProps<
@@ -27,7 +28,5 @@ export type TTextArea = Omit<
     HTMLTextAreaElement
   >,
   "size"
-> & {
-  size: TSize;
-  status: Omit<TVariant, "primary" | "secondary">;
-};
+> &
+  TInputExtend;

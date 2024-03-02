@@ -6,7 +6,7 @@ const t = initTRPC.create({
 });
 
 export const appRouter = t.router({
-  getUsers: t.procedure.query(({ ctx }) => {
+  getUsers: t.procedure.query(() => {
     return userList;
   }),
 });

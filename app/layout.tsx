@@ -4,7 +4,10 @@ import { Montserrat } from "next/font/google";
 import { AuthProvider } from "@/libs/auth/provider";
 import "./globals.css";
 
-const monserat = Montserrat({ subsets: ["latin"] });
+const monserat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "Next Boilerplate",

@@ -5,13 +5,12 @@ import {
 import { appRouter } from "@/libs/trpc/route";
 
 const handler = (request: Request) => {
-  console.log(`incoming request ${request.url}`);
   return fetchRequestHandler({
     endpoint: "/api/trpc",
     req: request,
     router: appRouter,
     createContext: function (
-      opts: FetchCreateContextFnOptions
+      _opts: FetchCreateContextFnOptions
     ): object | Promise<object> {
       return {};
     },

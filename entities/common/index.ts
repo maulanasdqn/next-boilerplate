@@ -7,6 +7,7 @@ export type TVariant =
   | "success"
   | "warning"
   | "info"
+  | "ghost"
   | "error";
 
 export type TVariantType = "solid" | "outline";
