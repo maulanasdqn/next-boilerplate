@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  neo-siakad:
-    container_name: neo-siakad
+  next-boilerplate:
+    container_name: next-boilerplate
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -10,7 +10,7 @@ services:
       - .env
     environment:
       POSTGRES_ADDR: postgres
-      POSTGRES_DATABASE: neosiakad-db
+      POSTGRES_DATABASE: next-boilerplate-db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?schema=public
