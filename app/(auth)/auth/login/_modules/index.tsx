@@ -1,12 +1,12 @@
 "use client";
-import { Button } from "@/components/atoms/button";
+import { Button } from "@/components/atoms";
 import { signIn } from "next-auth/react";
 import { FC, ReactElement } from "react";
 
 export const AuthLoginModule: FC = (): ReactElement => {
   return (
     <section className="flex flex-col items-center gap-y-6">
-      <div className="flex gap-x-4">
+      <div className="flex items-center gap-x-4">
         <Button
           onClick={() => signIn("google")}
           variant={"primary"}
