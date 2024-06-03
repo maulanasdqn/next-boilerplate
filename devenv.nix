@@ -55,7 +55,7 @@
       bun story:build
     '')
 
-    (writeScriptBin "db-generate" ''
+    (writeScriptBin "db-gen" ''
       bun db:gen
     '')
 
