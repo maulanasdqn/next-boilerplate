@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FC, PropsWithChildren } from "react";
+import type { FC, PropsWithChildren } from "react";
 import { Montserrat } from "next/font/google";
 import { AuthProvider } from "@/libs/auth/provider";
 import "./globals.css";
